@@ -2,8 +2,8 @@
 __pycache__/
 *.py[oc]
 build/
-dist/
 wheels/
+node_modules/
 *.egg-info
 
 # Virtual environments
