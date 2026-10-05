@@ -17,6 +17,8 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  // Served from https://<org>.github.io/aicn/ on GitHub Pages
+  base: '/aicn/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if

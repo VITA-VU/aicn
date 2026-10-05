@@ -17,6 +17,7 @@ import {
   MessageCircleQuestion,
   Zap
 } from "lucide-react"
+import sprintImage from "../../images/Picture1.png"
 
 const certifications = [
   {
@@ -100,7 +101,7 @@ export function Skills() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             We rapidly develop prototypes in short sprints, allowing for quick iterations and feedback. Our approach ensures that we deliver innovative solutions that meet your needs efficiently.
           </p>
-          <img src="src/images/Picture1.png" alt="The Stages of the Innovation Sprint" className="mx-auto rounded-lg" width={900} height={500} />
+          <img src={sprintImage} alt="The Stages of the Innovation Sprint" className="mx-auto rounded-lg" width={900} height={500} />
         </motion.div>
 
         {/* The Sprint */}
