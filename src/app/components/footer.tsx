@@ -10,7 +10,7 @@ const quickLinks = [
   { name: "About", href: "#about" },
   { name: "How We Work", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Resume", href: "#resume" },
+  { name: "Engagement", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ]
 
