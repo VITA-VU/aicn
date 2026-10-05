@@ -1,0 +1,111 @@
+/* Ported from tailwind.config.shared.cjs (Tailwind v3) to Tailwind v4 theme variables. */
+
+/* safelist */
+@source inline("rotate-45");
+
+/* Brand primary drives the semantic `primary` token used across the UI */
+:root {
+  --primary: #0077b3;
+  --primary-foreground: #ffffff;
+  --ring: #99bdd8;
+  --sidebar-primary: #0077b3;
+  --sidebar-primary-foreground: #ffffff;
+}
+
+.dark {
+  --primary: #99bdd8;
+  --primary-foreground: #003f6c;
+  --ring: #005b90;
+  --sidebar-primary: #99bdd8;
+  --sidebar-primary-foreground: #003f6c;
+}
+
+@theme {
+  /* fontFamily */
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+  /* listStyleType */
+  --list-style-type-square: square;
+  --list-style-type-roman: upper-roman;
+
+  /* boxShadow */
+  --shadow-default: 0 0 120px rgba(0, 0, 0, 0.1);
+  --shadow-6010: 0 0 60px rgba(0, 0, 0, 0.1);
+
+  /* dropShadow */
+  --drop-shadow-425: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-3015: 0 0 30px rgba(0, 0, 0, 0.15);
+  --drop-shadow-5010: 0 0 50px rgba(0, 0, 0, 0.1);
+  --drop-shadow-5020: 0 0 50px rgba(0, 0, 0, 0.2);
+  --drop-shadow-6010: 0 0 60px rgba(0, 0, 0, 0.1);
+  --drop-shadow-12010: 0 0 120px rgba(0, 0, 0, 0.1);
+
+  /* screens */
+  --breakpoint-xs: 375px;
+  --breakpoint-mm: 769px; /* medium->medium */
+  --breakpoint-ml: 1025px; /* medium->large */
+  --breakpoint-1xl: 1400px;
+  --breakpoint-3xl: 1700px;
+  --breakpoint-4xl: 1850px;
+  --breakpoint-5xl: 1920px;
+
+  /* fontSize */
+  --text-base: 1rem; /* 16 */
+  --text-base--line-height: 1.875rem;
+  --text-base--letter-spacing: 0rem;
+  --text-lg: 1.125rem; /* 18 */
+  --text-lg--line-height: 1.875rem;
+  --text-lg--letter-spacing: 0rem;
+  --text-xl: 1.25rem; /* 20 */
+  --text-xl--line-height: 1.875rem;
+  --text-xl--letter-spacing: 0rem;
+  --text-1xl: 1.375rem; /* 22 */
+  --text-1xl--line-height: 2rem;
+  --text-1xl--letter-spacing: 0rem;
+  --text-2xl: 1.5rem; /* 24 */
+  --text-2xl--line-height: 1.875rem;
+  --text-2xl--letter-spacing: 0rem;
+  --text-3xl: 1.875rem; /* 30 */
+  --text-3xl--line-height: 2.813rem;
+  --text-3xl--letter-spacing: 0rem;
+  --text-4xl: 2.813rem; /* 45 */
+  --text-4xl--line-height: 3.313rem;
+  --text-4xl--letter-spacing: 0rem;
+  --text-6xl: 3.75rem; /* 60 */
+  --text-6xl--line-height: 4rem;
+  --text-6xl--letter-spacing: 0rem;
+
+  /* colors (primary DEFAULT is the semantic --primary above) */
+  --color-primary-100: #dff2fd;
+  --color-primary-200: #e5eef5;
+  --color-primary-300: #99bdd8;
+  --color-primary-500: #0077b3;
+  --color-primary-600: #005b90;
+  --color-primary-650: #003f6c;
+
+  --color-disabled: #d8d3d0;
+  --color-disabled-500: #d8d3d0;
+
+  --color-stone: #d8d3d0;
+  --color-stone-500: #d8d3d0;
+
+  --color-zinc-150: #f2efed;
+  --color-zinc-750: #333333;
+
+  --color-background-400: #faf7f5;
+  --color-background-500: #f2efed;
+
+  --color-orange-550: #e8692d;
+  --color-orange-650: #cc4100;
+  --color-orange-950: #702400;
+
+  --color-yellow-350: #d6db00;
+
+  --color-emerald-650: #008053;
+
+  --color-indigo-850: #3b2171;
+
+  --color-neutral-450: #979797;
+  --color-neutral-550: #757575;
+}
