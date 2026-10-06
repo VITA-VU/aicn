@@ -7,121 +7,100 @@ import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog"
 import { ImageWithFallback } from "./figma/ImageWithFallback"
-import { ExternalLink, Calendar, Users, DollarSign, X } from "lucide-react"
+import { ExternalLink, Calendar, Users, DollarSign, X, Presentation, Video } from "lucide-react"
+import StudyQuest from "../../images/Study_quest.png"
+import ServiceBot from "../../images/service_bot.png"
+import CampaignStudio from "../../images/Campaign_Studio.png"
+import Kabu from "../../images/Kabu.png"
+import ResearchCupid from "../../images/research-cupid.png"
+
+
+// To add slide PDF: put it in src/slides/ and import it the way the images are imported. Then set slides to the imported value. That way it gets the right path under the /aicn/ base the site is served from.
 
 const projects = [
   {
     id: 1,
-    title: "Enterprise Cloud Migration",
-    description: "Led the migration of legacy systems to AWS cloud infrastructure for a Fortune 500 company.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-    tags: ["AWS", "Agile", "Migration", "Enterprise"],
-    duration: "18 months",
-    teamSize: "15 members",
-    budget: "$2.5M",
-    status: "Completed",
-    problem: "The client's legacy infrastructure was becoming increasingly expensive to maintain and lacked scalability for future growth.",
-    solution: "Implemented a phased cloud migration strategy using AWS services, ensuring zero downtime and improved performance.",
+    title: "Student Service Bot",
+    description: "Virtual Assistant for Student Desk Inquiries",
+    image: ServiceBot,
+    tags: ["SOZ", "Chatbot", "RAG"],
+    status: "In Progress",
+    problem: "The Student Desk is often overwhelmed with student questions regarding application and enrollment. Repetitive questions take up a lot of time, leaving less time for answering specific student concerns.",
+    solution: "A chatbot based on RAG (Retrieval-Augmented Generation) was developed to answer student questions using data from the VU website. The bot can handle a wide range of questions, freeing up the Student Desk to focus on more complex inquiries.",
+    link: "",
+    slides: "",
+    video: "",
     results: [
-      "Reduced infrastructure costs by 35%",
-      "Improved system performance by 60%",
-      "Achieved 99.9% uptime",
-      "Completed 2 months ahead of schedule"
+      "Chatbot prototype developed and tested",
+      "Now in development with IT and Student Desk for production development"
     ]
   },
   {
     id: 2,
-    title: "Digital Banking Platform",
-    description: "Managed the development of a modern digital banking platform with mobile-first approach.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    tags: ["FinTech", "Mobile", "Scrum", "Security"],
-    duration: "12 months",
-    teamSize: "20 members",
-    budget: "$3.2M",
+    title: "VU Study Quest",
+    description: "Matching Students to Bachelor Programs",
+    image: StudyQuest,
+    tags: ["Recruitment", "Interactive", "Matching"],
     status: "Completed",
-    problem: "Traditional banking processes were slow and customer satisfaction was declining due to outdated digital interfaces.",
-    solution: "Developed a comprehensive digital banking platform with advanced security features and intuitive user experience.",
+    problem: "First year students are dropping out at increasing rates due to a lack of understanding of the program they are enrolled in. Students often choose programs based on limited information, leading to mismatches between their interests and the program content.",
+    solution: "We developed an interactive web application that uses AI generated questions based on course data from the VU website. The tool learns from their answers in order to make recommendations based on their preferences.",
+    link: "",
+    slides: "",
+    video: "",
     results: [
-      "Increased customer satisfaction by 45%",
-      "Reduced transaction processing time by 70%",
-      "Enhanced security with zero breaches",
-      "Won 'Best Digital Banking App' award"
+      "AI Question Generation based on course materials",
+      "Engaging tool to boost recruitment and retention",
     ]
   },
   {
     id: 3,
-    title: "ERP System Implementation",
-    description: "Orchestrated the implementation of SAP ERP system across multiple departments and locations.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    tags: ["SAP", "ERP", "Integration", "Training"],
-    duration: "24 months",
-    teamSize: "25 members",
-    budget: "$4.1M",
+    title: "Research Cupid",
+    description: "Connecting Researchers Intelligently",
+    image: ResearchCupid,
+    tags: ["Research", "Collaboration", "PURE"],
     status: "Completed",
-    problem: "Disconnected systems across departments led to data silos and inefficient business processes.",
-    solution: "Implemented SAP ERP with custom modules, comprehensive training programs, and phased rollout strategy.",
+    problem: "In alignment with the strategic policy of the VU for 2026-2030, the AICN Strategy and Innovation team developed a tool to promote multi-disciplinary research within the university. ",
+    solution: "The tool develops a profile for each researcher based on their body of work, allowing users can semantically search the database of researchers and find potential collaborators that are catered to their profile.",
+    link: "",
+    slides: "",
+    video: "",
     results: [
-      "Integrated 15 departments seamlessly",
-      "Improved data accuracy by 90%",
-      "Reduced manual processes by 80%",
-      "Achieved ROI within 18 months"
+      "Integration with PURE database for researcher profiles",
+      "Embeddings based matching for semantic search and recommendations",
     ]
   },
   {
     id: 4,
-    title: "IoT Analytics Platform",
-    description: "Delivered an IoT data analytics platform for smart manufacturing operations.",
-    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&h=400&fit=crop",
-    tags: ["IoT", "Analytics", "Manufacturing", "Real-time"],
-    duration: "15 months",
-    teamSize: "12 members",
-    budget: "$1.8M",
-    status: "In Progress",
-    problem: "Manufacturing operations lacked real-time visibility into equipment performance and predictive maintenance capabilities.",
-    solution: "Built an IoT platform that collects, processes, and analyzes data from manufacturing equipment in real-time.",
+    title: "Kabu",
+    description: "Translating Organizational Goals into Employee Futures",
+    image: Kabu,
+    tags: ["HR", "Employee Development", "Agent Assisted"],
+    status: "Completed",
+    problem: "Part of the strategic policy of the VU for 2026-2030 is to further develop employee development and career growth. ",
+    solution: "Kabu (short for kabouter) is an organizational planning tool for employees, managers, and institutional leaders to take control of their futures at the university. Using the strategic goals defined by the university, career plans are mapped and projects can be appropriately scoped. With Kabu, all members of the VU have the ability to set goals and keep up to date with the changing landscape of university development. ",
+    link: "",
+    slides: "",
+    video: "",
     results: [
-      "Connected 500+ IoT devices",
-      "Reduced equipment downtime by 40%",
-      "Improved operational efficiency by 25%",
-      "Enabled predictive maintenance"
+      "AI assisted suggestions ",
+      "Agent guided research on global market trends and best practices",
     ]
   },
   {
     id: 5,
-    title: "Cybersecurity Framework",
-    description: "Established comprehensive cybersecurity framework and incident response procedures.",
-    image: "https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=600&h=400&fit=crop",
-    tags: ["Security", "Compliance", "Risk Management", "GDPR"],
-    duration: "9 months",
-    teamSize: "8 members",
-    budget: "$950K",
+    title: "VU Campaign Studio",
+    description: "Content Management and Ideation for Marketing Campaigns",
+    image: CampaignStudio,
+    tags: ["Marketing", "Recruitment", "Agent Assisted"],
     status: "Completed",
-    problem: "Increasing cyber threats and regulatory requirements demanded a robust security framework.",
-    solution: "Implemented multi-layered security architecture with continuous monitoring and compliance automation.",
+    problem: "VU Social Team is responsible for creating and managing marketing campaigns for the university. Management of campaigns, student ambassadors, and user generated content is time consuming and decentralized.",
+    solution: "The campaign studio allows for content planning in addition to event oversight, idea generation, and ambassador management",
+    link: "https://campaign-studio.vita.labs.vu.nl",
+    slides: "",
+    video: "",
     results: [
-      "Achieved 100% GDPR compliance",
-      "Reduced security incidents by 85%",
-      "Implemented 24/7 monitoring",
-      "Passed all security audits"
-    ]
-  },
-  {
-    id: 6,
-    title: "AI-Powered CRM System",
-    description: "Deployed machine learning-enhanced CRM system to improve customer relationship management.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-    tags: ["AI/ML", "CRM", "Automation", "Analytics"],
-    duration: "10 months",
-    teamSize: "14 members",
-    budget: "$1.2M",
-    status: "Completed",
-    problem: "Sales team struggled with lead qualification and customer insights were limited by manual processes.",
-    solution: "Integrated AI algorithms for lead scoring, customer behavior prediction, and automated workflow optimization.",
-    results: [
-      "Improved lead conversion by 55%",
-      "Automated 70% of routine tasks",
-      "Enhanced customer insights",
-      "Increased sales productivity by 40%"
+      "Centralization of campaign management and content creation",
+      "Agentic Event Planning and Ideation for Campaigns",
     ]
   }
 ]
@@ -199,14 +178,14 @@ export function Projects() {
                     )}
                   </div>
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
+                    {/* <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
                       {project.duration}
-                    </div>
-                    <div className="flex items-center gap-1">
+                    </div> */}
+                    {/* <div className="flex items-center gap-1">
                       <Users className="h-3 w-3" />
                       {project.teamSize}
-                    </div>
+                    </div> */}
                   </div>
                 </CardContent>
               </Card>
@@ -235,7 +214,7 @@ export function Projects() {
                   </div>
 
                   {/* Project Stats */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="text-center p-4 bg-muted rounded-lg">
                       <Calendar className="h-6 w-6 mx-auto mb-2 text-primary" />
                       <p className="font-semibold">{selectedProject.duration}</p>
@@ -260,7 +239,7 @@ export function Projects() {
                       </Badge>
                       <p className="text-sm text-muted-foreground">Status</p>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
@@ -270,6 +249,36 @@ export function Projects() {
                       </Badge>
                     ))}
                   </div>
+
+                  {/* Project Links */}
+                  {(selectedProject.link || selectedProject.slides || selectedProject.video) && (
+                    <div className="flex flex-wrap gap-3">
+                      {selectedProject.link && (
+                        <Button asChild>
+                          <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4" />
+                            View Project
+                          </a>
+                        </Button>
+                      )}
+                      {selectedProject.slides && (
+                        <Button asChild variant="outline">
+                          <a href={selectedProject.slides} target="_blank" rel="noopener noreferrer">
+                            <Presentation className="h-4 w-4" />
+                            Slide Deck
+                          </a>
+                        </Button>
+                      )}
+                      {selectedProject.video && (
+                        <Button asChild variant="outline">
+                          <a href={selectedProject.video} target="_blank" rel="noopener noreferrer">
+                            <Video className="h-4 w-4" />
+                            Watch Video
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
 
                   {/* Problem, Solution, Results */}
                   <div className="space-y-6">

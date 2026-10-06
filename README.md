@@ -15,18 +15,18 @@
   (Following [Vite docs](https://vite.dev/guide/static-deploy.html#github-pages))
 
   1) Make repo public (settings > change visibility)
-  2) Set Pages Build & Deployment source to GitHub Actions (settings > pages > build and deployment)
+  2) Set Build & Deployment source to GitHub Actions (settings > pages > build and deployment > source)
   3) Add `base` to `vite.config.ts` with repo name
   4) Create the `.github/workflows/deploy.yml` workflow for build and deploy
   5) Push to main to build and deploy
 
   ### Troubleshooting
 
-  * Ensure no versioning is used in the module names as this will cause deployment to fail on GH
+  * Do not use dependency names with versioning (ie: `@emotion/react@11.14.0` vs `@emotion/react`) as this may cause the deployment to fail on GH due to pnpm versioning.
 
-  * Ensure name of package in package.json matches organization name
+  * Ensure name of package in package.json matches organization name.
 
   ### Code Source
 
-  This is a code bundle for IT Project Manager Portfolio (Community). The original project is available at https://www.figma.com/design/57zIzN5bzUevcUznY9vKo9/IT-Project-Manager-Portfolio--Community-.
+  This is based on a code bundle for IT Project Manager Portfolio (Community). The original project is available at https://www.figma.com/design/57zIzN5bzUevcUznY9vKo9/IT-Project-Manager-Portfolio--Community-.
   

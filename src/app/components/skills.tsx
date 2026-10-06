@@ -19,30 +19,21 @@ import {
 } from "lucide-react"
 import sprintImage from "../../images/Picture1.png"
 
-const certifications = [
+const principles = [
   {
-    name: "PMP - Project Management Professional",
-    organization: "PMI",
-    year: "2022",
+    name: "Open Source and Sovereign",
+    description: "We use open source and sovereign AI technologies to ensure transparency, security, and control over our solutions.",
     icon: Award
   },
   {
-    name: "Certified ScrumMaster (CSM)",
-    organization: "Scrum Alliance",
-    year: "2021",
+    name: "GDPR Compliant",
+    description: "We ensure all our solutions are compliant with GDPR regulations.",
     icon: Zap
   },
   {
-    name: "ITIL Foundation",
-    organization: "AXELOS",
-    year: "2020",
+    name: "Discovery Process",
+    description: "We invest time in understanding the problem and the stakeholders first, rather than jumping straight into a solution.",
     icon: Shield
-  },
-  {
-    name: "Agile Project Management",
-    organization: "Google",
-    year: "2023",
-    icon: Lightbulb
   }
 ]
 
@@ -152,6 +143,49 @@ export function Skills() {
             ))}
           </ol>
         </motion.div>
+
+        {/* Our Principles */}
+        <div className="container mx-auto px-4 py-25">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold mb-4">Our Development Principles</h3>
+            <p className="text-muted-foreground">Our approach is grounded in innovation, collaboration, and continuous improvement.</p>
+          </div>
+                  <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+            {principles.map((principle, index) => (
+              <motion.div
+                key={principle.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                viewport={{ once: true }}
+              >
+                <Card className="text-center h-full hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="mb-4 inline-block p-3 bg-primary/10 rounded-full">
+                      <principle.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{principle.name}</h3>
+                    <p className="text-sm text-muted-foreground">{principle.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+            </motion.div>
+        </motion.div>
+        </div>
       </div>
     </section>
   )
