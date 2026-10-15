@@ -44,7 +44,7 @@ const projects = [
     status: "Completed",
     problem: "First year students are dropping out at increasing rates due to a lack of understanding of the program they are enrolled in. Students often choose programs based on limited information, leading to mismatches between their interests and the program content.",
     solution: "We developed an interactive web application that uses AI generated questions based on course data from the VU website. The tool learns from their answers in order to make recommendations based on their preferences.",
-    link: "",
+    link: "https://studyquest.vita.labs.vu.nl",
     slides: "",
     video: "",
     results: [

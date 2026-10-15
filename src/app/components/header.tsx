@@ -5,6 +5,7 @@ import { Button } from "./ui/button"
 import { useTheme } from "./theme-provider"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "motion/react"
+import { Link } from "react-router"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -47,15 +48,16 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="flex items-center space-x-2"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-semibold">AICN</span>
-            </div>
-            <span className="font-semibold text-lg">AI Competence Network: Innovation & Consultancy </span>
+            <Link to="/" className="flex items-center space-x-2" title="AI Competence Network home">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-semibold">AICN</span>
+              </div>
+              <span className="font-semibold text-lg">AI Competence Network</span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}

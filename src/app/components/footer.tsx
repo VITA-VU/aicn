@@ -48,7 +48,7 @@ export function Footer() {
             <div className="w-15 h-15 bg-primary rounded-full flex items-center justify-center">
               <span className="text-primary-foreground font-semibold">AICN</span>
             </div>
-            <span className="font-semibold text-lg">AI Competence Network: Innovation & Consultancy </span>
+            <span className="font-semibold text-lg">Innovation & Consultancy </span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
               Interdisciplinary team specializing in delivering rapid prototypes and innovative solutions using sovereign and secure AI technologies.
