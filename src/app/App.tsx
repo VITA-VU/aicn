@@ -7,7 +7,7 @@ import { Projects } from "./components/projects"
 import { Resume } from "./components/resume"
 // import { Testimonials } from "./components/testimonials"
 import { Contact } from "./components/contact"
-import { Footer } from "./components/footer"
+import { NetworkFooter } from "./components/home/network-footer"
 
 export default function App() {
   return (
@@ -22,7 +22,7 @@ export default function App() {
         {/* <Testimonials /> */}
         <Contact />
       </main>
-      <Footer />
+      <NetworkFooter />
       <Toaster />
     </div>
   )

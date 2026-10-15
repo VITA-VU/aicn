@@ -36,12 +36,6 @@ const contactInfo = [
     label: "Location",
     value: "VU StartHub, Amsterdam, Netherlands",
     href: "#"
-  },
-  {
-    icon: ExternalLink,
-    label: "More About the AICN",
-    value: "vu.nl/aicn",
-    href: "https://vu.nl/en/about-vu/project/ai-competence-network"
   }
 ]
 

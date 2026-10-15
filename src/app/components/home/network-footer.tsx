@@ -2,6 +2,7 @@
 
 import { Link } from "react-router"
 import { teams } from "../../data/teams"
+import { Button } from "../ui/button"
 
 export function NetworkFooter() {
   return (
@@ -45,9 +46,11 @@ export function NetworkFooter() {
         </div>
 
         <div className="pt-8 mt-8 border-t text-muted-foreground">
-          © {new Date().getFullYear()} AI Competence Network, VU Amsterdam
+            <span>© 2024 <a href="https://www.figma.com/community/file/1537012604602069110/it-project-manager-portfolio" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">Rohit Sharma</a>, licensed under CC BY-SA 4.0. Modified from the original.</span>
         </div>
+            
       </div>
+      
     </footer>
   )
 }
