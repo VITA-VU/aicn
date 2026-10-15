@@ -38,12 +38,11 @@ export function NetworkAbout() {
             About Us
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            One Network, Three Teams
+            One Network, Multiple Teams
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             The AI Competence Network is a VU Amsterdam community of staff who share knowledge and work together on AI.
-            Through our Innovation & Consultancy, Policy and Community Engagement teams, we help the university
-            explore new possibilities, set clear guidelines and build AI skills across campus.
+            Through our sub-teams, we help the university explore new possibilities, set clear guidelines and build AI skills across campus.
           </p>
         </motion.div>
 

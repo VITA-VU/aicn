@@ -1,4 +1,4 @@
-import { Lightbulb, Scale, Users } from "lucide-react"
+import { Lightbulb, Scale, Users, School } from "lucide-react"
 
 export const teams = [
   {
@@ -24,6 +24,14 @@ export const teams = [
     tagline: "Connecting people around AI",
     description:
       "We bring together staff, students and researchers through workshops, meetups and knowledge sharing to build AI literacy across campus.",
+  },
+  {
+    slug: "literacy",
+    name: "AI Literacy",
+    icon: School,
+    tagline: "Building AI knowledge across campus",
+    description:
+      "We provide training and resources to help staff, students and researchers develop their AI skills and understanding.",
   },
 ]
 

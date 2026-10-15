@@ -30,6 +30,7 @@ export function AppRoutes() {
           path="/community-engagement"
           element={<SubteamPlaceholder team={teamBySlug("community-engagement")} />}
         />
+        <Route path="/literacy" element={<SubteamPlaceholder team={teamBySlug("literacy")} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </ThemeProvider>
