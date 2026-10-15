@@ -123,8 +123,7 @@ export function Projects() {
             Transforming Ideas into Reality
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A showcase of successful projects that demonstrate my ability to deliver complex technical solutions 
-            on time and within budget.
+            Previous challenges tackled by the Innovation & Consultancy team.
           </p>
         </motion.div>
 

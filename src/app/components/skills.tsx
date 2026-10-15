@@ -18,6 +18,14 @@ import {
   Zap
 } from "lucide-react"
 import sprintImage from "../../images/Picture1.png"
+import { CyclingText } from "./cycling-text"
+
+const questionExamples = [
+  "“Can AI help students find answers to their questions faster?”",
+  "“How can we help students choose the right programs?”",
+  "“Can we improve on-campus collaboration for researchers?”",
+  "“How do we increase VU brand awareness?”",
+]
 
 const principles = [
   {
@@ -92,8 +100,27 @@ export function Skills() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             We rapidly develop prototypes in short sprints, allowing for quick iterations and feedback. Our approach ensures that we deliver innovative solutions that meet your needs efficiently.
           </p>
-          <img src={sprintImage} alt="The Stages of the Innovation Sprint" className="mx-auto rounded-lg" width={900} height={500} />
         </motion.div>
+
+        {/*The Question */}
+                <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-12 mt-12">
+            <h3 className="text-2xl font-bold mb-4">It All Starts with a Question</h3>
+            <p className="text-muted-foreground">At the heart of each sprint, there is a central question, either coming from a stakeholder or from a team investigation.</p>
+            <CyclingText
+              phrases={questionExamples}
+              className="mt-12 text-xl md:text-2xl font-semibold text-primary italic min-h-16 md:min-h-10"
+            />
+            <p className="text-muted-foreground mt-12"> From these questions, we derive our hypotheses and begin the prototyping process.</p>
+          </div>
+
+          
+          </motion.div>
 
         {/* The Sprint */}
         <motion.div
@@ -106,6 +133,9 @@ export function Skills() {
             <h3 className="text-2xl font-bold mb-4">The Innovation Sprint</h3>
             <p className="text-muted-foreground">A structured approach to rapid prototyping and solution development.</p>
           </div>
+
+                    <img src={sprintImage} alt="The Stages of the Innovation Sprint" className="mx-auto rounded-lg" width={900} height={500} />
+
 
           <ol className="max-w-4xl mx-auto">
             {sprintSteps.map((step, index) => (
